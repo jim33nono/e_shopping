@@ -1,29 +1,13 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var handlebars = require('express-handlebars');
+var http = require('http');
 
-var app = express();
+var server = http.createServer(function(request, response) {
 
-// setup handlebars view engine
-app.engine('handlebars',
-    handlebars({defaultLayout: 'main_logo'}));
-app.set('view engine', 'handlebars');
+    response.writeHead(200, {"Content-Type": "text/plain"});
+    response.end("Hello World!");
 
-// static resources
-app.use(express.static(__dirname + '/public'));
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-
-// Routing
-var routes = require('./routes/index');
-app.use('/', routes);
-
-app.use(function(req, res) {
-    res.status(404);
-    res.render('404');
 });
 
-app.listen(3000, function(){
-  console.log('http://localhost:3000');
-});
+var port = process.env.PORT || 1337;
+server.listen(port);
+
+console.log("Server running at http://localhost:%d", port);
