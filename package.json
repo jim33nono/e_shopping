@@ -1,14 +1,8 @@
 {
   "name": "assignment_3",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
-   "engines": {
-        "node": ">=6.9.1"
-    },
-  "scripts": {
-    "start": "node index.js"
-  },
   "author": "Lynn",
   "license": "ISC",
   "dependencies": {
@@ -16,5 +10,11 @@
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "mongoose": "^5.0.2"
+  },
+   "engines": {
+        "node": ">=6.9.1"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
