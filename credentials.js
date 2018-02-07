@@ -1,7 +1,7 @@
 module.exports = {
-	host:     'ds249005.mlab.com',
-	port: 		'49005',
+	host:     'ds125618.mlab.com',
+	port: 		'25618',
 	username: 'root',
 	password: '0000',
-	database: 'e_3c_shop'
+	database: 'e_shopping'
 }
